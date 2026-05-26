@@ -35,7 +35,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </header>
       <main className="main">{children}</main>
       <footer className="footer">
-        <p>AutoMarket AI — WSWork Technical Test © 2024</p>
+        <p>AutoMarket AI — WSWork Technical Test © 2026</p>
       </footer>
     </div>
   );
