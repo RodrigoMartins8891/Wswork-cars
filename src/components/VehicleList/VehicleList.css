@@ -1,0 +1,108 @@
+.vehicle-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brand-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  overflow: hidden;
+}
+
+.brand-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.brand-header:hover { background: var(--surface2); }
+.brand-header:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+.brand-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+}
+.brand-count {
+  font-size: 12px;
+  color: var(--text3);
+  margin-top: 1px;
+}
+
+.brand-chevron { color: var(--text3); }
+
+.brand-cars {
+  padding: 4px 16px 16px;
+}
+
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.list-view .vehicle-card .card-details {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.vehicle-list-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px 24px;
+  color: var(--text3);
+  font-size: 15px;
+  text-align: center;
+}
+
+.skeleton-card {
+  background: var(--surface2);
+  border-radius: var(--radius);
+  padding: 20px;
+  min-height: 120px;
+}
+.skeleton-title { height: 20px; width: 60%; border-radius: 6px; margin-bottom: 12px; }
+.skeleton-line  { height: 14px; width: 80%; border-radius: 4px; margin-bottom: 8px; }
+.skeleton-line.short { width: 50%; }
+
+@media (max-width: 640px) {
+  .grid-view { grid-template-columns: 1fr; }
+  .brand-header { padding: 14px 16px; }
+  .brand-cars { padding: 4px 10px 10px; }
+}

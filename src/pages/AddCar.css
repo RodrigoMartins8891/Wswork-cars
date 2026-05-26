@@ -1,0 +1,35 @@
+.add-car-page { display: flex; flex-direction: column; gap: 28px; max-width: 720px; }
+
+.page-header { display: flex; align-items: flex-start; gap: 16px; }
+.back-btn {
+  width: 40px; height: 40px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.back-btn:hover { border-color: var(--border2); color: var(--text); }
+
+.page-title {
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.title-icon { color: var(--accent2); }
+.page-subtitle { color: var(--text3); font-size: 14px; margin-top: 4px; }
+
+.form-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  padding: 32px;
+}
+
+@media (max-width: 640px) {
+  .form-card { padding: 20px 16px; }
+}
